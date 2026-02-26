@@ -15,4 +15,4 @@ phases:
       - chmod 400 cicd.pem
 
       - echo Deploying to EC2...
-      - ssh -o StrictHostKeyChecking=no -i cicd.pem ubuntu@98.92.232.255 "cd ~/aws-cicd-demo && git pull && npm install && (pkill node || true) && nohup npm start > output.log 2>&1 < /dev/null &"
+      - ssh -o StrictHostKeyChecking=no -i cicd.pem ubuntu@98.92.232.255 'nohup bash -c "cd ~/aws-cicd-demo && git pull && npm install && pkill node || true && npm start" > output.log 2>&1 < /dev/null &'
