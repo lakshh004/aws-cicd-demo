@@ -28,38 +28,7 @@ Every time code is pushed to GitHub, the application is:
 
 ## 🏗️ Architecture Diagram
 
-
-+-------------------+
-| 👨‍💻 Developer |
-| (Local Machine) |
-+---------+---------+
-|
-| git push
-v
-+-------------------+
-| 🐙 GitHub |
-+---------+---------+
-|
-| Webhook Trigger
-v
-+-------------------+
-| 🟠 AWS CodeBuild |
-| buildspec.yml |
-+---------+---------+
-|
-| Retrieve SSH Key
-v
-+-------------------+
-| 🔐 Secrets Manager|
-+-------------------+
-|
-| SSH Deploy
-v
-+-------------------+
-| 🐧 EC2 (Ubuntu) |
-| Node App Running |
-+-------------------+
-
+<img width="1019" height="370" alt="image" src="https://github.com/user-attachments/assets/19f39056-d900-42a5-872a-7960824f8992" />
 
 
 ---
