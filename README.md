@@ -7,15 +7,15 @@
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates a **fully automated CI/CD pipeline** built using:
 
-- 🟠 **AWS CodeBuild**
-- 🔐 **AWS Secrets Manager**
-- 🐧 **EC2 (Ubuntu)**
-- 🐙 **GitHub Webhooks**
-- 🟢 **Node.js (v18)**
+-  **AWS CodeBuild**
+-  **AWS Secrets Manager**
+-  **EC2 (Ubuntu)**
+-  **GitHub Webhooks**
+-  **Node.js (v18)**
 
 Every time code is pushed to GitHub, the application is:
 
@@ -25,7 +25,7 @@ Every time code is pushed to GitHub, the application is:
 4. Made live without manual SSH login
 
 ---
-## 📂 Project Structure
+##  Project Structure
 
 ```bash
 aws-cicd-demo/
@@ -40,7 +40,7 @@ aws-cicd-demo/
 ```
 
 ---
-## 🏗️ Architecture Diagram
+##  Architecture Diagram
 
 <img width="1019" height="370" alt="image" src="https://github.com/user-attachments/assets/19f39056-d900-42a5-872a-7960824f8992" />
 
@@ -52,53 +52,53 @@ aws-cicd-demo/
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
-### 🟠 AWS CodeBuild
+###  AWS CodeBuild
 Used as the CI/CD execution engine.  
 Automatically triggers builds on GitHub push events and executes the deployment workflow defined in `buildspec.yml`.
 
-### 🔐 AWS Secrets Manager
+###  AWS Secrets Manager
 Securely stores the EC2 private SSH key.  
 Prevents hardcoding sensitive credentials inside the repository or build configuration.
 
-### 🐧 Amazon EC2 (Ubuntu)
+###  Amazon EC2 (Ubuntu)
 Hosts the Node.js application.  
 Acts as the deployment target where the application runs publicly on port 3000.
 
-### 🔑 IAM Roles
+###  IAM Roles
 Grants CodeBuild permission to access Secrets Manager securely using the principle of least privilege.
 
-### 🐙 GitHub
+###  GitHub
 Source code repository and webhook trigger mechanism for automated builds.
 
-### 📝 buildspec.yml
+###  buildspec.yml
 Defines the CI/CD pipeline steps including:
 - Installing dependencies
 - Retrieving secrets
 - SSH deployment
 - Restarting application
 
-### 🟢 Node.js (v18)
+###  Node.js (v18)
 Backend runtime environment used to serve the HTTP application.
 
-### 📊 Amazon CloudWatch Logs
+###  Amazon CloudWatch Logs
 Automatically captures CodeBuild logs for debugging and monitoring pipeline execution.
 
-### 🛡 EC2 Security Groups
+###  EC2 Security Groups
 Controls inbound traffic (port 3000 for app access, port 22 for SSH).
 
 ---
 
-## ⚙️ CI/CD Workflow
+##  CI/CD Workflow
 
-### 🔄 Continuous Integration (CI)
+###  Continuous Integration (CI)
 
 - Code pushed to GitHub
 - Webhook triggers AWS CodeBuild
 - Dependencies installed using `npm install`
 
-### 🚀 Continuous Deployment (CD)
+###  Continuous Deployment (CD)
 
 - Private SSH key retrieved from Secrets Manager
 - Secure SSH connection to EC2
@@ -106,7 +106,7 @@ Controls inbound traffic (port 3000 for app access, port 22 for SSH).
 - Node app restarted automatically
 
 ---
-## 🔄 CI/CD Pipeline Execution
+##  CI/CD Pipeline Execution
 
 Below is a successful AWS CodeBuild execution triggered automatically after a Git push.
 
@@ -124,7 +124,7 @@ Status: SUCCEEDED
 
 ---
 
-## 📸 Live Deployment Preview
+##  Live Deployment Preview
 
 Below is the live application running on the EC2 Ubuntu server after successful CI/CD deployment.
 
@@ -144,7 +144,7 @@ Below is the live application running on the EC2 Ubuntu server after successful 
 
 ---
 
-## 🎯 Conclusion
+##  Conclusion
 
 This project was built to understand how real CI/CD pipelines work beyond theory. Instead of just reading about automation, I implemented a complete workflow that takes code from GitHub and deploys it automatically to a live EC2 server.
 
@@ -158,6 +158,3 @@ This project reflects practical DevOps fundamentals:
 - Clean and repeatable build processes  
 - Understanding logs and debugging failures  
 
-It’s a simple architecture, but it represents a complete end-to-end deployment pipeline - from local development to a live cloud server.
-
-There’s still room to improve it further (Dockerization, load balancing, HTTPS, blue-green deployments), but this project establishes a solid foundation in CI/CD and cloud-based deployment.
