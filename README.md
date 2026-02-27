@@ -25,7 +25,21 @@ Every time code is pushed to GitHub, the application is:
 4. Made live without manual SSH login
 
 ---
+## 📂 Project Structure
 
+```bash
+aws-cicd-demo/
+│
+├── .gitignore            # Prevents sensitive files (e.g., private keys) from being committed
+├── README.md             # Complete project documentation
+├── buildspec.yml         # AWS CodeBuild CI/CD pipeline configuration
+├── cicd-ec2-key.pub      # Public SSH key used for EC2 authentication (safe to expose)
+├── index.js              # Node.js HTTP server application
+├── package.json          # Project metadata and dependency definitions
+└── package-lock.json     # Locked dependency versions for reproducible builds
+```
+
+---
 ## 🏗️ Architecture Diagram
 
 <img width="1019" height="370" alt="image" src="https://github.com/user-attachments/assets/19f39056-d900-42a5-872a-7960824f8992" />
