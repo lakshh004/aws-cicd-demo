@@ -29,6 +29,11 @@ Every time code is pushed to GitHub, the application is:
 ## 🏗️ Architecture Diagram
 
 <img width="1019" height="370" alt="image" src="https://github.com/user-attachments/assets/19f39056-d900-42a5-872a-7960824f8992" />
+<p align="center">
+  <ins>Architecture Diagram</ins>
+</p>
+
+
 
 
 ---
