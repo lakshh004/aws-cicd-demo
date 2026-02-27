@@ -58,3 +58,24 @@ aws-cicd-demo/
 ├── package-lock.json
 ├── buildspec.yml
 └── README.md
+
+---
+---
+
+## 📸 Live Deployment Preview
+
+Below is the live application running on the EC2 Ubuntu server after successful CI/CD deployment.
+
+![CI/CD Live Deployment Screenshot]<img width="1464" height="741" alt="image" src="https://github.com/user-attachments/assets/e0b335f3-bbdb-482d-b1cf-98afdd8c0a70" />
+
+
+**What this proves:**
+- ✅ Node.js running on EC2
+- ✅ Port 3000 exposed correctly
+- ✅ CI/CD pipeline deployed latest version
+- ✅ Application restarted automatically after push
+- ✅ Infrastructure and build automation working end-to-end
+
+---
+
+
