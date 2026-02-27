@@ -29,12 +29,50 @@ Every time code is pushed to GitHub, the application is:
 ## 🏗️ Architecture Diagram
 
 <img width="1019" height="370" alt="image" src="https://github.com/user-attachments/assets/19f39056-d900-42a5-872a-7960824f8992" />
+
 <p align="center">
   <ins>Architecture Diagram</ins>
 </p>
 
 
 
+---
+
+## 🛠 Technologies Used
+
+### 🟠 AWS CodeBuild
+Used as the CI/CD execution engine.  
+Automatically triggers builds on GitHub push events and executes the deployment workflow defined in `buildspec.yml`.
+
+### 🔐 AWS Secrets Manager
+Securely stores the EC2 private SSH key.  
+Prevents hardcoding sensitive credentials inside the repository or build configuration.
+
+### 🐧 Amazon EC2 (Ubuntu)
+Hosts the Node.js application.  
+Acts as the deployment target where the application runs publicly on port 3000.
+
+### 🔑 IAM Roles
+Grants CodeBuild permission to access Secrets Manager securely using the principle of least privilege.
+
+### 🐙 GitHub
+Source code repository and webhook trigger mechanism for automated builds.
+
+### 📝 buildspec.yml
+Defines the CI/CD pipeline steps including:
+- Installing dependencies
+- Retrieving secrets
+- SSH deployment
+- Restarting application
+
+### 🟢 Node.js (v18)
+Backend runtime environment used to serve the HTTP application.
+
+### 📊 Amazon CloudWatch Logs
+Automatically captures CodeBuild logs for debugging and monitoring pipeline execution.
+
+### 🛡 EC2 Security Groups
+Controls inbound traffic (port 3000 for app access, port 22 for SSH).
 
 ---
 
@@ -71,7 +109,11 @@ aws-cicd-demo/
 
 Below is the live application running on the EC2 Ubuntu server after successful CI/CD deployment.
 
-![CI/CD Live Deployment Screenshot]<img width="1464" height="741" alt="image" src="https://github.com/user-attachments/assets/e0b335f3-bbdb-482d-b1cf-98afdd8c0a70" />
+<img width="1464" height="741" alt="image" src="https://github.com/user-attachments/assets/e0b335f3-bbdb-482d-b1cf-98afdd8c0a70" />
+
+<p align="center">
+  <ins>Preview Screenshot</ins>
+</p>
 
 
 **What this proves:**
