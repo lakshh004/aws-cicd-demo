@@ -1,4 +1,4 @@
-# 🚀 AWS CI/CD Pipeline – Node.js Deployment on EC2
+# 🚀 AWS CI/CD Pipeline - Node.js Deployment on EC2
 
 ![AWS](https://img.shields.io/badge/AWS-CodeBuild-orange)
 ![Node](https://img.shields.io/badge/Node.js-v18-green)
@@ -148,7 +148,7 @@ Below is the live application running on the EC2 Ubuntu server after successful 
 
 This project was built to understand how real CI/CD pipelines work beyond theory. Instead of just reading about automation, I implemented a complete workflow that takes code from GitHub and deploys it automatically to a live EC2 server.
 
-Every `git push` now triggers AWS CodeBuild, installs dependencies, securely retrieves the SSH key from Secrets Manager, connects to the EC2 instance, pulls the latest changes, and restarts the application — all without manual login.
+Every `git push` now triggers AWS CodeBuild, installs dependencies, securely retrieves the SSH key from Secrets Manager, connects to the EC2 instance, pulls the latest changes, and restarts the application - all without manual login.
 
 While building this, I ran into real-world issues like SSH key formatting errors, YAML configuration mistakes, process detachment problems, and Git conflicts. Debugging these helped me understand how CI/CD systems behave internally rather than just how to configure them.
 
@@ -158,6 +158,6 @@ This project reflects practical DevOps fundamentals:
 - Clean and repeatable build processes  
 - Understanding logs and debugging failures  
 
-It’s a simple architecture, but it represents a complete end-to-end deployment pipeline — from local development to a live cloud server.
+It’s a simple architecture, but it represents a complete end-to-end deployment pipeline - from local development to a live cloud server.
 
 There’s still room to improve it further (Dockerization, load balancing, HTTPS, blue-green deployments), but this project establishes a solid foundation in CI/CD and cloud-based deployment.
