@@ -106,17 +106,22 @@ Controls inbound traffic (port 3000 for app access, port 22 for SSH).
 - Node app restarted automatically
 
 ---
-## 📂 Project Structure
+## 🔄 CI/CD Pipeline Execution
 
-aws-cicd-demo/
-│
-├── index.js
-├── package.json
-├── package-lock.json
-├── buildspec.yml
-└── README.md
+Below is a successful AWS CodeBuild execution triggered automatically after a Git push.
 
----
+```bash
+Source: GitHub Webhook Trigger
+Build Environment: AWS CodeBuild (Node.js 18)
+Deployment: Automated SSH to EC2
+Status: SUCCEEDED
+```
+<img width="1147" height="555" alt="image" src="https://github.com/user-attachments/assets/8c1f1dfd-86f7-415e-b295-e4b868d2bc62" />
+
+<p align="center">
+  <ins>Screenshot of Successful Build</ins>
+</p>
+
 ---
 
 ## 📸 Live Deployment Preview
